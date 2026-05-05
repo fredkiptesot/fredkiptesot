@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unit Conversions</title>
+    <style>
+        /* Small style fix to make the home button visible */
+        #go-home img { width: 50px; }
+        section { padding: 20px; border-bottom: 1px solid #ccc; }
+    </style>
+  </head>
+  <body>
+    <section id="home">
+        <header><b>Unit Conversions</b></header>
+        <nav>
+            <a href="#temperature"><button>Temperature</button></a>
+            <a href="#weight"><button>Weight</button></a>
+            <a href="#distance"><button>Distance</button></a>
+        </nav>
+    </section>
+
+    <div id="all-conversion-sections">
+        <!-- Temperature Section -->
+        <section id="temperature">
+            <div id="tmp">
+                <figure>
+                    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/thermo.png" width="200px"/>
+                    <figcaption>Celsius to Fahrenheit Conversion</figcaption>
+                </figure>
+                <article>
+                    <fieldset>
+                        <legend>Temperature</legend>
+                        <label for="celsius">Celsius</label> <br/>
+                        <input type="number" id="celsius"> <br/>
+                        <!-- Changed ID to btn-temp -->
+                        <button id="btn-temp"> Convert </button> <br/>
+                        <input type="number" id="fahrenheit" readonly> <br/>
+                        <label for="fahrenheit">Fahrenheit</label>
+                    </fieldset>
+                </article>
+                <aside>Formula: (C × 9/5) + 32</aside>
+            </div>
+        </section>
+
+        <!-- Weight Section -->
+        <section id="weight">
+            <div id="wgt">
+              <figure>
+                <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/weight.png" width="200px"/>
+                <figcaption>Kilogram to Pound Conversion</figcaption>
+              </figure>
+              <article>
+                <fieldset>
+                    <legend>Weight</legend>
+                    <label for="kilo">Kilograms</label> <br/>
+                    <input type="number" id="kilo"> <br/>
+                    <!-- Changed ID to btn-weight -->
+                    <button id="btn-weight"> Convert </button> <br/>
+                    <input type="number" id="pounds" readonly> <br/>
+                    <label for="pounds">Pounds</label>
+                </fieldset>
+              </article>
+              <aside>Formula: kg x 2.205</aside>
+            </div>
+        </section>
+
+        <!-- Distance Section -->
+        <section id="distance">
+            <div id="dst">
+              <figure>
+                <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/speedo.png" width="200px"/>
+                <figcaption>Kilometer to Mile Conversion</figcaption>
+              </figure>
+              <article>
+                <fieldset>
+                    <legend>Distance</legend>
+                    <label for="km">Kilometers</label> <br/>
+                    <input type="number" id="km"> <br/>
+                    <!-- Changed ID to btn-dist -->
+                    <button id="btn-dist"> Convert </button> <br/>
+                    <input type="number" id="miles" readonly> <br/>
+                    <label for="miles">Miles</label>
+                </fieldset>
+              </article>
+              <aside>Formula: km ÷ 1.609</aside>
+            </div>
+        </section>
+    </div>
+
+    <div id="go-home">
+        <a href="#home">
+            <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/home.svg" alt="Home"/>
+        </a>
+    </div>
+
+    <footer>Learn more about HTML as a part of the IBM Fullstack Cloud Developer Certification</footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Temperature Logic
+        document.getElementById('btn-temp').onclick = function() {
+            let c = document.getElementById('celsius').value;
+            document.getElementById('fahrenheit').value = (c * 9/5) + 32;
+        };
+
+        // Weight Logic
+        document.getElementById('btn-weight').onclick = function() {
+            let kg = document.getElementById('kilo').value;
+            document.getElementById('pounds').value = (kg * 2.205).toFixed(2);
+        };
+
+        // Distance Logic
+        document.getElementById('btn-dist').onclick = function() {
+            let km = document.getElementById('km').value;
+            document.getElementById('miles').value = (km / 1.609).toFixed(2);
+        };
+    </script>
+  </body>
+</html>
