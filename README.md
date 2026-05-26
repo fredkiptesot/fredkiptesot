@@ -2,7 +2,7 @@
 - 👀 I’m interested in web design and development.
 - 🌱 I’m currently learning HTML,CSS and JavaScript.
 - 💞️ I’m looking to collaborate on web design.
-- 📫 How to reach me koechf@gmail.com
+- 📫 How to reach me koechf@yahoo.co.uk
 
 
 <!---
