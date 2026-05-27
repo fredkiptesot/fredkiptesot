@@ -1,0 +1,169 @@
+-<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple FAQ | devChallenges.io</title>
+    
+    <style>
+        :root {
+            --bg-color: #f9fafb;
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --accent: #2563eb;
+            --border: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            color: #111827;
+            letter-spacing: -0.025em;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .faq-container {
+            width: 100%;
+            max-width: 700px;
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        /* Using native details/summary for better UX */
+        details {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+        }
+
+        details:last-of-type {
+            border-bottom: none;
+        }
+
+        summary {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        summary:hover {
+            color: var(--accent);
+        }
+
+        /* Custom arrow icon */
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        details[open] summary::after {
+            content: '−';
+        }
+
+        .content {
+            padding: 1rem 0.5rem;
+            color: var(--text-muted);
+        }
+
+        .content ol, .content ul {
+            margin: 1rem 0 1rem 1.5rem;
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: auto;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Frequently Asked Questions</h1>
+        <p>Browse through the most frequently asked questions</p>
+    </header>
+
+    <main class="faq-container">
+        <details open>
+            <summary>How can I track my order?</summary>
+            <div class="content">
+                <p>You can track your order using the following steps:</p>
+                <ol>
+                    <li>Go to the <a href="#">Order Tracking</a> page.</li>
+                    <li>Enter your order number and email address.</li>
+                    <li>Click on the <strong>Track Order</strong> button.</li>
+                </ol>
+                <p>Issues? Visit our <a href="#">Help Center</a>.</p>
+            </div>
+        </details>
+
+        <details>
+            <summary>What is your return policy?</summary>
+            <div class="content">
+                <p>We offer a 30-day return policy. Key points:</p>
+                <ul>
+                    <li><strong>Original condition:</strong> Unworn and unwashed.</li>
+                    <li><strong>Packaging:</strong> Include all original tags.</li>
+                    <li><strong>Proof:</strong> Receipt is required.</li>
+                </ul>
+                <p>Read our full <a href="#">Return Policy</a>.</p>
+            </div>
+        </details>
+    </main>
+
+    <footer>
+        <p>Coded by <a href="#">fredkiptesot</a> | Challenge by <a href="https://www.devchallenges.io" target="_blank">devChallenges.io</a></p>
+    </footer>
+
+</body>
+</html>
